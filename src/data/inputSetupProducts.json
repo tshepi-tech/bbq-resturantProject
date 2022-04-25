@@ -44,7 +44,7 @@
     "required": false,
     "type": "text"
   },
-  "HeroAlt": {
+  "heroAlt": {
     "label": "Add alternative text for banner image",
     "required": false,
     "type": "text"

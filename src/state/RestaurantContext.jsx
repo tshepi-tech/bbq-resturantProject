@@ -31,8 +31,6 @@ export function RestaurantProvider({ children }) {
     setImageURLCat,
     imageAltCat,
     setImageAltCat,
-  };
-  const valuesProduct = {
     category,
     setCategory,
     title,
@@ -41,7 +39,6 @@ export function RestaurantProvider({ children }) {
     setDetails,
     description,
     setDescription,
-
     ingredients,
     setIngredients,
     price,
@@ -55,6 +52,7 @@ export function RestaurantProvider({ children }) {
     heroAlt,
     setHeroAlt,
   };
+
   //Methods
 
   function deleteCategory({ id, menu, setMenu }) {
@@ -66,11 +64,7 @@ export function RestaurantProvider({ children }) {
     setMenu(clonedCategories);
   }
 
-  return (
-    <Context.Provider valuesProduct={valuesProduct} value={values}>
-      {children}
-    </Context.Provider>
-  );
+  return <Context.Provider value={values}>{children}</Context.Provider>;
 }
 
 export function useRestaurant() {

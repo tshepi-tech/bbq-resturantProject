@@ -1,65 +1,74 @@
 //Project files
 import InputCategory from "./InputCategory";
-import inputSetup from "../../data/inputSetup.json";
+import inputSetupProducts from "../../data/inputSetupProducts.json";
 import { useRestaurant } from "../../state/RestaurantContext";
 
 export default function InputFieldProduct({ onCreate }) {
   const {
-    category, setCategory,
-   title, setTitle,
-  details, setDetails,
- description, setDescription,
-
- ingredients, setIngredients,
- price, setPrice,
-imageURL, setImageURL,
-   imageAlt, setImageAlt,
-heroURL, setHeroURL,
-    heroAlt, setHeroAlt
+    category,
+    setCategory,
+    title,
+    setTitle,
+    details,
+    setDetails,
+    description,
+    setDescription,
+    ingredients,
+    setIngredients,
+    price,
+    setPrice,
+    imageURL,
+    setImageURL,
+    imageAlt,
+    setImageAlt,
+    heroURL,
+    setHeroURL,
+    heroAlt,
+    setHeroAlt,
   } = useRestaurant();
 
   return (
     <div>
       <form onSubmit={onCreate}>
-      < InputCategory 
-          state={[ category, setCategory]}
-          setup={inputSetup.title}
+        <InputCategory
+          state={[category, setCategory]}
+          setup={inputSetupProducts.category}
         />
         <InputCategory
           state={[title, setTitle]}
-          setup={inputSetup.title}
+          setup={inputSetupProducts.title}
         />
         <InputCategory
           state={[details, setDetails]}
-          setup={inputSetup.title}
+          setup={inputSetupProducts.details}
         />
         <InputCategory
           state={[description, setDescription]}
-          setup={inputSetup.description}
-        />
-         <InputCategory
-          state={[ingredients, setIngredients}
-          setup={inputSetup.title}
+          setup={inputSetupProducts.description}
         />
         <InputCategory
-          state={[price, setPrice}
-          setup={inputSetup.title}
+          state={[ingredients, setIngredients]}
+          setup={inputSetupProducts.ingredients}
+        />
+        <InputCategory
+          state={[price, setPrice]}
+          setup={inputSetupProducts.price}
         />
         <InputCategory
           state={[imageURL, setImageURL]}
-          setup={inputSetup.imageURL}
+          setup={inputSetupProducts.imageURL}
         />
         <InputCategory
           state={[imageAlt, setImageAlt]}
-          setup={inputSetup.imageAlt}
+          setup={inputSetupProducts.imageAlt}
         />
         <InputCategory
           state={[heroURL, setHeroURL]}
-          setup={inputSetup.imageAlt}
+          setup={inputSetupProducts.heroURL}
         />
         <InputCategory
           state={[heroAlt, setHeroAlt]}
-          setup={inputSetup.imageAlt}
+          setup={inputSetupProducts.heroAlt}
         />
         <button onClick={onCreate}>submit</button>
       </form>
