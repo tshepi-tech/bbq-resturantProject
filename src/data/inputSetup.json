@@ -1,0 +1,22 @@
+{
+  "title": {
+    "label": "Add category",
+    "required": true,
+    "type": "text"
+  },
+  "description": {
+    "label": "Add description",
+    "required": true,
+    "type": "text"
+  },
+  "imageURL": {
+    "label": "Add image link",
+    "required": true,
+    "type": "text"
+  },
+  "imageAlt": {
+    "label": "Add alternative text for image",
+    "required": true,
+    "type": "text"
+  }
+}
