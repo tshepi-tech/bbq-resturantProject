@@ -12,6 +12,7 @@ import InputFieldMenu from "../componentsAdmin/InputFieldMenu";
 import { getCollection, getDocument } from "../../scripts/firestore";
 import { useRestaurant } from "../../state/RestaurantContext";
 
+// Component too long
 export default function AdminMenu() {
   const { categoryId } = useParams();
   const {

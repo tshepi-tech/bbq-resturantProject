@@ -20,6 +20,7 @@ export default function App() {
     <div className="App">
       <Navigation />
       <Routes>
+        {/* Here is ok to use catId to make everythng 1 line */}
         <Route path="/" element={<Home />} />
         <Route path="category/:categoryId" element={<Menu />} />
         <Route path="category/:categoryId/:subId" element={<Category />} />
